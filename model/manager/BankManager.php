@@ -20,5 +20,11 @@ Class BankManager {
     $q->bindValue(":amount", $account->getAmount());
     $q->execute();
   }
+
+  // display list
+  public function getList() {
+  $q=$this->db->query("SELECT * FROM account");
+  return $q->fetchAll(PDO::FETCH_ASSOC);
+}
 }
  ?>
