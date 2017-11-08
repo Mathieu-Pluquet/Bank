@@ -26,5 +26,23 @@ Class BankManager {
   $q=$this->db->query("SELECT * FROM account");
   return $q->fetchAll(PDO::FETCH_ASSOC);
 }
+
+  // delete account
+  public function delete($account) {
+    $q=$this->db->prepare("DELETE from account WHERE id = :id");
+    $q->bindValue(":name", $account->getName());
+    $q->bindValue(":amount", $account->getAmount());
+    $q->bindValue(":id", $account->getId());
+    $q->execute();
+  }
+
+
+  public function get($id){
+    $q=$this->db->prepare("SELECT * from car where id=:id");
+    $q->bindValue(":id",$id);
+    $q->execute();
+
+    return $q->fetch(PDO::FETCH_ASSOC);
+  }
 }
  ?>
