@@ -42,6 +42,15 @@ public function get($id){
     $q->execute();
   }
 
+  // update withdrawal and adding account
+
+  public function update($account){
+    $q=$this->db->prepare("UPDATE account set amount=:amount where id=:id");
+    $q->bindValue(':id',$account->getId());
+    $q->bindValue(':amount',$account->getAmount());
+    $q->execute();
+  }
+
 
 
 }

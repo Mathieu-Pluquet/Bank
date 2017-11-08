@@ -1,3 +1,6 @@
+<?php
+include 'view/header.php';
+ ?>
 <!DOCTYPE html>
 <html>
   <head>
@@ -5,14 +8,16 @@
     <title></title>
   </head>
   <body>
-<form class="" action="index.php" method="post">
+<form class="" action="with_add.php" method="post">
 <input type="text" name="adding" value="" placeholder="Adding">
-<input type="submit" name="sendadding" value="">
+<input type="hidden" name="id" value="<?php echo $account->getId()?>">
+<input type="submit" name="sendadding" value="adding">
 </form>
 
-<form class="" action="index.php" method="post">
+<form class="" action="with_add.php" method="post">
   <input type="text" name="withdraw" value="" placeholder="withdraw">
-  <input type="submit" name="sendwithdraw" value="">
+  <input type="hidden" name="id" value="<?php echo $account->getId()?>">
+  <input type="submit" name="sendwithdraw" value="withdraw">
 </form>
   </body>
 </html>

@@ -1,4 +1,6 @@
-<?php foreach ($object as $value) {?>
+<?php
+include 'view/header.php';
+foreach ($object as $value) {?>
 
 
   <html lang="en">
@@ -17,15 +19,20 @@
 <tr>
 <th class="text-left">Name</th>
 <th class="text-left">Amount</th>
-<th class="text-left"></th>
+<th class="text-left">Action</th>
 </tr>
 </thead>
 <tbody class="table-hover">
 <tr>
 <td class="text-left"><?php echo $value->getName(); ?></td>
 <td class="text-left"><?php echo $value->getAmount(); ?> €</td>
-<td class="text-left"><a href="?delete=<?php echo $value->getId();?>">Delete</a>
+<td class="text-left">
+  <a  href="with_add.php?id=<?php echo $value->getId();?>">Withdraw/Adding</a> <p></p>
+
+  <a href="?delete=<?php echo $value->getId();?>">Delete</a> <br> <p></p>
 </td>
+
+
 
 </tr>
 </tbody>

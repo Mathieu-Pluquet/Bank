@@ -1,3 +1,6 @@
+<?php
+include 'view/header.php';
+ ?>
 <form class="" action="index.php" method="post">
   <input type="text" name="name" value="" placeholder="name">
   <input type="text" name="amount" value="" placeholder="starting amount">
