@@ -18,6 +18,7 @@ if(isset($_GET['delete'])){
   $manager->delete($account);
 }
 
+// return add page or index page 
 include 'view/header.php';
 if(isset($_GET['add'])){
   include 'view/add.php';

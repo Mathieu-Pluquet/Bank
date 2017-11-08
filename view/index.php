@@ -17,6 +17,7 @@
 <tr>
 <th class="text-left">Name</th>
 <th class="text-left">Amount</th>
+<th class="text-left"></th>
 </tr>
 </thead>
 <tbody class="table-hover">
