@@ -31,11 +31,15 @@ class Bank
          }
 
     public function withdrawal($withdraw) {
+      if($withdraw>=0) {
       $this->amount-=$withdraw;
+    }
     }
 
     public function adding($adding) {
+      if($adding>=0) {
       $this->amount+=$adding;
+      }
     }
 
     /**
