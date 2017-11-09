@@ -7,7 +7,7 @@ include 'view/header.php';
 <?php
 foreach ($list as $value) {
 ?>
-<option value="<?php echo $value ?>"> <?php echo $value['name'] ?></option>
+<option value="<?php echo $value['id'] ?>"> <?php echo $value['name'] ?> <?php echo $value['amount'] ?>€</option>
 <?php
 } ?>
 </select>
@@ -17,12 +17,12 @@ foreach ($list as $value) {
   <?php
   foreach ($list as $value) {
   ?>
-  <option value="<?php echo $value ?>"> <?php echo $value['name'] ?></option>
+  <option value="<?php echo $value['id'] ?>"> <?php echo $value['name'] ?>  <?php echo $value['amount'] ?>€</option>
   <?php
   } ?>
 </select>
 <br>
 <p></p>
-<input type="text" name="" value="" placeholder="amount of money">
-<input type="submit" name="" value="">
+<input type="text" name="amounttrans" value="" placeholder="amount of money">
+<input type="submit" name="sendtransfer" value="">
 </form>
