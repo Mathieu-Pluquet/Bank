@@ -26,7 +26,7 @@
            <a class="nav-link" href="index.php?add">Add Account</a>
          </li>
          <li class="nav-item">
-           <a class="nav-link" href="#">Transfer money</a>
+           <a class="nav-link" href="with_add.php?trans">Transfer money</a>
          </li>
        </ul>
      </div>
