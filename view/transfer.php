@@ -2,7 +2,7 @@
 include 'view/header.php';
 ?>
 <p>debit account</p>
-<form class="" action="with_add.php" method="post">
+<form class="" action="index.php" method="post">
 <select class="" name="debit">
 <?php
 foreach ($list as $value) {

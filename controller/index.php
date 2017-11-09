@@ -18,6 +18,24 @@ if(isset($_GET['delete'])){
   $manager->delete($account);
 }
 
+
+// transfer
+if(isset($_POST['sendtransfer'])) {
+  if(isset($_POST['debit'])){
+  $get=$manager->get($_POST['debit']);
+  $account = new Bank ($get);
+  $account->withdrawal($_POST['amounttrans']);
+  $manager->update($account);
+  }
+
+  if(isset($_POST['credit'])){
+  $get=$manager->get($_POST['credit']);
+  $account = new Bank ($get);
+  $account->adding($_POST['amounttrans']);
+  $manager->update($account);
+  }
+}
+
 // return add page or index page
 if(isset($_GET['add'])){
   include 'view/add.php';
