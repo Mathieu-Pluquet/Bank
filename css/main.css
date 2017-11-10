@@ -260,7 +260,7 @@ td.text-right {
 
 .ma {
   display: block;
-  margin-bottom: 25px;
+  margin-bottom: 20px;
 }
 
 
@@ -348,6 +348,27 @@ td.text-right {
 .clearfix:after {
     clear: both;
 }
+
+@media (min-height: 720px) {
+  .bg {
+  background-color:#F7F7F7;
+  }
+}
+
+@media (max-height: 720px) {
+  .bg {
+    background-color:#ECEEEF;
+  }
+
+}
+
+
+
+
+
+
+
+
 
 
 /* ==========================================================================
