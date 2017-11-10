@@ -49,7 +49,7 @@ include 'view/header.php';
 <!-- version mobile  -->
 
 
-<table class="table-fill hidden-lg-up">
+<table class="table-fill hidden-lg-up w-75 mx-auto">
 <thead>
 <tr class="d-flex flex-column">
 <th class="test">Adding</th>
