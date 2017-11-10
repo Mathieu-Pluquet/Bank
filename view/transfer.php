@@ -33,6 +33,9 @@ foreach ($list as $value) {
   <input class="mini test" type="number" name="amounttrans" value="" placeholder="Amount">
   <div class="input-group-addon">€</div>
       </div> <br>
+      <p class="bgc"><?php if(isset($_SESSION['error']["amounttrans"])) {
+          echo ' Add a positive amount';
+        }?></p>
 <input type="submit" name="sendtransfer" value="Send transfer">
 </form>
 </td>

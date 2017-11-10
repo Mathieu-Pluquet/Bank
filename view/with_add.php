@@ -44,6 +44,10 @@ include 'view/header.php';
 </tbody>
 </table>
 
+<p class="bgc"><?php if(isset($_SESSION['error']["addwith"])) {
+    echo 'Add a positive amount';
+  }?></p>
+
 
 
 <!-- version mobile  -->

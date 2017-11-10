@@ -5,6 +5,13 @@ $manager = new BankManager($db);
 
 // withdraw/adding
 if(isset($_POST['sendadding']) || isset($_POST['sendwithdraw'])) {
+  if(isset($_POST['adding']) && $_POST['adding']<0 || isset($_POST['withdraw']) && $_POST['withdraw']<0) {
+    $_SESSION['error']['addwith']=true;
+    header('Location:with_add.php?id='.$_POST['id']);
+  }
+  else {
+    unset($_SESSION['error']['addwith']);
+  }
   $get=$manager->get($_POST['id']);
   $account = new Bank ($get);
 

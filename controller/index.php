@@ -9,7 +9,7 @@ if(isset($_POST['addaccount']) && isset($_POST['name']) && isset($_POST['amount'
     header('Location:index.php?add ');
   }
   else {
-    unset($_session['error']['amount']);
+    unset($_SESSION['error']['amount']);
   }
   foreach ($_POST as $key => $value) {
   $data[$key]=strip_tags($value);
@@ -31,6 +31,7 @@ if(isset($_POST['sendtransfer'])) {
 
   if($_POST['amounttrans']<0) {
     $_SESSION['error']['amounttrans']=true;
+    header('Location:with_add.php?trans');
   }
   else {
     unset($_SESSION['error']['amounttrans']);
@@ -63,6 +64,7 @@ foreach ($list as $key => $value) {
 }
 include 'view/index.php';
 }
+
 
 
 
