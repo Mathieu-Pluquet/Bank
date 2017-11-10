@@ -1,6 +1,13 @@
 <?php
 include 'view/header.php';
 ?>
+ <link rel="stylesheet" href="css/main.css">
+<table class="table-fill">
+<thead>
+<th class="test">New Account</th>
+<tbody class="table-hover">
+<tr id="hov">
+<td class="test hov">
 <p>debit account</p>
 <form class="" action="index.php" method="post">
 <select class="" name="debit">
@@ -23,6 +30,13 @@ foreach ($list as $value) {
 </select>
 <br>
 <p></p>
-<input type="text" name="amounttrans" value="" placeholder="amount of money">
-<input type="submit" name="sendtransfer" value="">
+<div class="test center">
+  <input type="text" name="amounttrans" value="" placeholder="amount of money">
+  <div class="input-group-addon">€</div>
+      </div> <br>
+<input type="submit" name="sendtransfer" value="send">
 </form>
+</td>
+</tr>
+</tbody>
+</table>

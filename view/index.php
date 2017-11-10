@@ -12,10 +12,10 @@
 <table class="table-fill">
 <thead>
 <tr>
-<th class="text-left">N°Account</th>
-<th class="text-left">Name</th>
-<th class="text-left">Amount</th>
-<th class="text-left">Action</th>
+<th >N°Account</th>
+<th >Name</th>
+<th >Amount</th>
+<th >Action</th>
 </tr>
 </thead>
 
@@ -29,9 +29,9 @@ foreach ($object as $value) {?>
 <td class="text-left"><?php echo $value->getName(); ?></td>
 <td class="text-left"><?php echo $value->getAmount(); ?> €</td>
 <td class="text-left">
-  <a  href="with_add.php?id=<?php echo $value->getId();?>">Withdraw/Adding</a> <p></p>
+  <a class="ma" id="no" href="with_add.php?id=<?php echo $value->getId();?>">Withdraw/Adding</a>
 
-  <a href="?delete=<?php echo $value->getId();?>">Delete Account</a> <br> <p></p>
+  <a class="ma" href="?delete=<?php echo $value->getId();?>">Delete Account</a>
 </td>
 </tr>
 </tbody>
