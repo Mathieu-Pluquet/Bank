@@ -4,6 +4,13 @@ $manager = new BankManager($db);
 
 // add
 if(isset($_POST['addaccount']) && isset($_POST['name']) && isset($_POST['amount']) ){
+  if($_POST['amount']<0) {
+    $_SESSION['error']['amount']=true;
+    header('Location:index.php?add ');
+  }
+  else {
+    unset($_session['error']['amount']);
+  }
   foreach ($_POST as $key => $value) {
   $data[$key]=strip_tags($value);
 }
@@ -21,6 +28,14 @@ if(isset($_GET['delete'])){
 
 // transfer
 if(isset($_POST['sendtransfer'])) {
+
+  if($_POST['amounttrans']<0) {
+    $_SESSION['error']['amounttrans']=true;
+  }
+  else {
+    unset($_SESSION['error']['amounttrans']);
+  }
+
   if(isset($_POST['debit'])){
   $get=$manager->get($_POST['debit']);
   $account = new Bank ($get);
