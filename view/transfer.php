@@ -1,10 +1,9 @@
 <?php
 include 'view/header.php';
 ?>
- <link rel="stylesheet" href="css/main.css">
 <table class="table-fill">
 <thead>
-<th class="test">New Account</th>
+<th class="test">Transfer money</th>
 <tbody class="table-hover">
 <tr id="hov">
 <td class="test hov">
@@ -31,7 +30,7 @@ foreach ($list as $value) {
 <br>
 <p></p>
 <div class="test center">
-  <input type="text" name="amounttrans" value="" placeholder="amount of money">
+  <input class="mini test" type="number" name="amounttrans" value="" placeholder="Amount">
   <div class="input-group-addon">€</div>
       </div> <br>
 <input type="submit" name="sendtransfer" value="send">

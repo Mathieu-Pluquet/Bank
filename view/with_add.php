@@ -21,7 +21,7 @@ include 'view/header.php';
    <td class="" >
 <form class="test" action="with_add.php" method="post">
 <div class="test center">
-  <input class="mini" type="number" name="adding" value="" placeholder="Amount">
+  <input class="mini test" type="number" name="adding" value="" placeholder="Amount">
        <div class="input-group-addon">€</div>
      </div>
 <input type="hidden" name="id" value="<?php echo $account->getId()?>"> <p></p>
@@ -32,7 +32,7 @@ include 'view/header.php';
 <td class="" >
 <form class="test" action="with_add.php" method="post">
   <div class="test center">
-    <input class="mini" type="number" name="withdraw" value="" placeholder="Amount">
+    <input class="mini test" type="number" name="withdraw" value="" placeholder="Amount">
          <div class="input-group-addon">€</div>
        </div>
   <input type="hidden" name="id" value="<?php echo $account->getId()?>"> <p></p>

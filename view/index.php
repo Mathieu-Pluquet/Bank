@@ -1,9 +1,11 @@
+<?php
+include 'view/header.php';
+ ?>
 <html lang="en">
 <head>
 <meta charset="utf-8" />
 <title>Table Style</title>
 <meta name="viewport" content="initial-scale=1.0; maximum-scale=1.0; width=device-width;">
-<link rel="stylesheet" href="css/main.css">
 </head>
 
 <body>
@@ -21,7 +23,6 @@
 
 
 <?php
-include 'view/header.php';
 foreach ($object as $value) {?>
   <tbody class="table-hover">
   <tr>
@@ -35,10 +36,6 @@ foreach ($object as $value) {?>
 </td>
 </tr>
 </tbody>
-
-
-
-
 
 <?php
 }?>

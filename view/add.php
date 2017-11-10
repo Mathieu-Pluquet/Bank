@@ -1,7 +1,6 @@
 <?php
 include 'view/header.php';
  ?>
- <link rel="stylesheet" href="css/main.css">
 
  <table class="table-fill">
  <thead>
@@ -17,7 +16,7 @@ include 'view/header.php';
     <div class="input-group-addon">€</div>
         </div>
        <p></p>
-  <input type="submit" name="addaccount" value="addaccount">
+  <input type="submit" name="addaccount" value="Create Account">
 </form>
 </td>
 </tr>
