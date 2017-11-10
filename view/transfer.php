@@ -33,7 +33,7 @@ foreach ($list as $value) {
   <input class="mini test" type="number" name="amounttrans" value="" placeholder="Amount">
   <div class="input-group-addon">€</div>
       </div> <br>
-<input type="submit" name="sendtransfer" value="send">
+<input type="submit" name="sendtransfer" value="Send transfer">
 </form>
 </td>
 </tr>

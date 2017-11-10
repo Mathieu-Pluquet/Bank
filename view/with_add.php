@@ -25,7 +25,7 @@ include 'view/header.php';
        <div class="input-group-addon">€</div>
      </div>
 <input type="hidden" name="id" value="<?php echo $account->getId()?>"> <p></p>
-<input type="submit" name="sendadding" value="adding">
+<input type="submit" name="sendadding" value="send adding">
 </form>
 </td>
 
@@ -36,7 +36,7 @@ include 'view/header.php';
          <div class="input-group-addon">€</div>
        </div>
   <input type="hidden" name="id" value="<?php echo $account->getId()?>"> <p></p>
-  <input type="submit" name="sendwithdraw" value="withdraw">
+  <input type="submit" name="sendwithdraw" value="send withdraw">
 </form>
   </body>
 </td>
