@@ -4,6 +4,7 @@ $manager = new BankManager($db);
 
 // add
 if(isset($_POST['addaccount']) && isset($_POST['name']) && isset($_POST['amount']) ){
+  if(empty($_POST['name']) || empty($_POST['amount'])) {
   if($_POST['amount']<0) {
     $_SESSION['error']['amount']=true;
     header('Location:index.php?add ');
@@ -16,6 +17,7 @@ if(isset($_POST['addaccount']) && isset($_POST['name']) && isset($_POST['amount'
 }
     $account = new Bank($data);
     $manager->add($account);
+}
 }
 
 // delete

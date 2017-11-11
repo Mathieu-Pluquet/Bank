@@ -30,7 +30,7 @@ foreach ($list as $value) {
 <br>
 <p></p>
 <div class="test center">
-  <input class="mini test" type="number" name="amounttrans" value="" placeholder="Amount">
+  <input class="mini test" type="number" name="amounttrans" value="" placeholder="Amount" required>
   <div class="input-group-addon">€</div>
       </div> <br>
       <p class="bgc"><?php if(isset($_SESSION['error']["amounttrans"])) {

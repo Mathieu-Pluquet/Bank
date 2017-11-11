@@ -10,9 +10,9 @@ include 'view/header.php';
  <tr>
 <td class="test">
 <form class="" action="index.php" method="post">
-  <input class="my-4" type="text" name="name" value="" placeholder="name" maxlength="15">
+  <input class="my-4" type="text" name="name" value="" placeholder="name" maxlength="15" required>
   <div class="test center">
-    <input class="test mini" type="number" name="amount" value="" placeholder="Amount">
+    <input class="test mini" type="number" name="amount" value="" placeholder="Amount" required>
     <div class="input-group-addon">€</div>
         </div>
         <br>
