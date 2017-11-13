@@ -1,4 +1,5 @@
 <?php
+// connection with bdd
 include 'model/connect.php';
 $manager = new BankManager($db);
 
@@ -16,9 +17,8 @@ if(isset($_POST['sendadding']) || isset($_POST['sendwithdraw'])) {
     // delete $_SESSION['error']['addwith']
     unset($_SESSION['error']['addwith']);
   }
-  // recover id with $_POST
+  // recover id with $_POST & create object
   $get=$manager->get($_POST['id']);
-  // create new object Bank with ($get)
   $account = new Bank ($get);
 
   // click add
@@ -30,7 +30,7 @@ if(isset($_POST['sendadding']) || isset($_POST['sendwithdraw'])) {
   if(isset($_POST['withdraw'])){
   $account->withdrawal($_POST['withdraw']);
   }
-  // activate the function update in $manager
+  // use method for update
   $manager->update($account);
 }
 

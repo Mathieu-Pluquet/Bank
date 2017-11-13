@@ -24,7 +24,6 @@ if(isset($_POST['addaccount']) && isset($_POST['name']) && isset($_POST['amount'
 }
     // create new object Bank
     $account = new Bank($data);
-    // activate the function add in $manager
     $manager->add($account);
   }
 }
@@ -33,11 +32,9 @@ if(isset($_POST['addaccount']) && isset($_POST['name']) && isset($_POST['amount'
 
 // if isset ($_GET['delete']) then condition = true
 if(isset($_GET['delete'])){
-  // recover id with $_GET
+  // recover id with $_GET & create new object
   $get = $manager->get($_GET['delete']);
-  // create new object Bank with ($get)
   $account = new Bank($get);
-  // activate the function delete in $manager
   $manager->delete($account);
 }
 
@@ -59,25 +56,19 @@ if(isset($_POST['sendtransfer']) && isset($_POST['amounttrans'])) {
   }
   // ($_POST['debit']) = dropdown debit
   if(isset($_POST['debit'])){
-  // recover id with $_POST
+  // recover id with $_POST & create new object & use method for update
   $get=$manager->get($_POST['debit']);
-  // create new object Bank with ($get)
   $account = new Bank ($get);
-  // activate the function withdrawal in $account
   $account->withdrawal($_POST['amounttrans']);
-  // activate the function update in $manager
   $manager->update($account);
   }
 
   // ($_POST['debit']) = dropdown credit
   if(isset($_POST['credit'])){
-  // recover id with $_POST
+  // recover id with $_POST & create new object & use method for update
   $get=$manager->get($_POST['credit']);
-  // create new object Bank with ($get)
   $account = new Bank ($get);
-  // activate the function adding in $account
   $account->adding($_POST['amounttrans']);
-  // activate the function update in $manager
   $manager->update($account);
   }
 }
