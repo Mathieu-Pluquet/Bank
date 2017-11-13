@@ -22,6 +22,7 @@ include 'view/header.php';
                 </thead>
 
                 <!-- display board -->
+                
                   <?php
                     foreach ($object as $value) {?>
                     <tbody class="table-hover">
