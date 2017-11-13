@@ -13,7 +13,7 @@ Class BankManager {
       $this->db = $db;
   }
 
-  // add
+  // add account
   public function add ($account) {
     $q=$this->db->prepare("INSERT INTO account SET name=:name, amount=:amount");
     $q->bindValue(":name", $account->getName());
@@ -27,11 +27,11 @@ Class BankManager {
   return $q->fetchAll(PDO::FETCH_ASSOC);
 }
 
-public function get($id){
+  // recover id
+  public function get($id){
   $q=$this->db->prepare("SELECT * from account where id=:id");
   $q->bindValue(":id",$id);
   $q->execute();
-
   return $q->fetch(PDO::FETCH_ASSOC);
 }
 
@@ -43,15 +43,12 @@ public function get($id){
   }
 
   // update withdrawal and adding account
-
   public function update($account){
     $q=$this->db->prepare("UPDATE account set amount=:amount where id=:id");
     $q->bindValue(':id',$account->getId());
     $q->bindValue(':amount',$account->getAmount());
     $q->execute();
   }
-
-
 
 }
  ?>

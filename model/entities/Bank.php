@@ -6,8 +6,7 @@ class Bank
     private $name;
     private $amount;
 
-
-    // hydrate
+      // construct and hydrate
       /**
           * @param array $donnees
           */

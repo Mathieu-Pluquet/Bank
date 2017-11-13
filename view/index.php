@@ -20,7 +20,7 @@ include 'view/header.php';
 </tr>
 </thead>
 
-
+<!-- display board -->
 <?php
 foreach ($object as $value) {?>
   <tbody class="table-hover">
