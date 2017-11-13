@@ -14,4 +14,4 @@ function chargerClasse($classname)
 
 spl_autoload_register('chargerClasse');
 session_start();
-include 'controller/index.php';
+include 'controller/with_add.php';

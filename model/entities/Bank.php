@@ -6,8 +6,7 @@ class Bank
     private $name;
     private $amount;
 
-
-    // hydrate
+      // construct and hydrate
       /**
           * @param array $donnees
           */
@@ -30,6 +29,17 @@ class Bank
              }
          }
 
+    public function withdrawal($withdraw) {
+      if($withdraw>=0) {
+      $this->amount-=$withdraw;
+    }
+    }
+
+    public function adding($adding) {
+      if($adding>=0) {
+      $this->amount+=$adding;
+      }
+    }
 
     /**
      * Get the value of Id
@@ -99,5 +109,54 @@ class Bank
 
         return $this;
     }
+
+    /**
+     * Get the value of Withdraw
+     *
+     * @return int
+     */
+    public function getWithdraw()
+    {
+        return $this->withdraw;
+    }
+
+    /**
+     * Set the value of Withdraw
+     *
+     * @param int withdraw
+     *
+     */
+    public function setWithdraw($withdraw)
+    {
+        $this->withdraw = $withdraw;
+
+        return $this;
+    }
+
+
+    /**
+     * Get the value of adding
+     *
+     * @return int
+     */
+    public function getAdding()
+    {
+        return $this->adding;
+    }
+
+    /**
+     * Set the value of Adding
+     *
+     * @param int adding
+     *
+     */
+    public function setAdding($adding)
+    {
+        $this->adding = $adding;
+
+        return $this;
+    }
+
+
 
 }
