@@ -37,7 +37,7 @@ if(isset($_GET['delete'])){
   $get = $manager->get($_GET['delete']);
   // create new object Bank with ($get)
   $account = new Bank($get);
-    // activate the function delete in $manager
+  // activate the function delete in $manager
   $manager->delete($account);
 }
 
