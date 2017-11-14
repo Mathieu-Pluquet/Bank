@@ -15,8 +15,7 @@
 <body>
     <div class="jumbotron jumbotron-fluid">
         <div class="container">
-            <h1 class="display-3">Bank</h1>
-            <p></p>
+            <h1 class="display-3 maa">Bank</h1>
 
             <!-- navbar -->
             <nav class="navbar navbar-toggleable-md navbar-light bg">

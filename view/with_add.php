@@ -24,8 +24,7 @@ include 'view/header.php';
                         <input class="mini test" type="number" name="adding" value="" placeholder="Amount" required>
                         <div class="input-group-addon">€</div>
                     </div>
-                    <input type="hidden" name="id" value="<?php echo $account->getId()?>">
-                    <p></p>
+                    <input class="maaa" type="hidden" name="id" value="<?php echo $account->getId()?>"> <br>
                     <input type="submit" name="sendadding" value="send adding">
                 </form>
             </td>
@@ -36,8 +35,7 @@ include 'view/header.php';
                         <input class="mini test" type="number" name="withdraw" value="" placeholder="Amount" required>
                         <div class="input-group-addon">€</div>
                     </div>
-                    <input type="hidden" name="id" value="<?php echo $account->getId()?>">
-                    <p></p>
+                    <input type="hidden" name="id" value="<?php echo $account->getId()?>"> <br>
                     <input type="submit" name="sendwithdraw" value="send withdraw">
                 </form>
           </td>
@@ -45,11 +43,13 @@ include 'view/header.php';
     </tbody>
 </table>
 
-<p class="bgc">
-    <?php if(isset($_SESSION['error']["addwith"])) {
-echo 'Add a positive amount';
-}?>
-</p>
+            <!-- session error  -->
+            
+            <p class="bgc">
+                <?php if(isset($_SESSION['error']["addwith"])) {
+            echo 'Add a positive amount';
+            }?>
+            </p>
 
 
 
@@ -66,8 +66,7 @@ echo 'Add a positive amount';
                         <input class="mini test" type="number" name="adding" value="" placeholder="Amount">
                         <div class="input-group-addon">€</div>
                     </div>
-                    <input type="hidden" name="id" value="<?php echo $account->getId()?>">
-                    <p></p>
+                    <input type="hidden" name="id" value="<?php echo $account->getId()?>"> <br>
                     <input type="submit" name="sendadding" value="send adding">
                 </form>
             </td>
@@ -83,8 +82,7 @@ echo 'Add a positive amount';
                             <input class="mini test" type="number" name="withdraw" value="" placeholder="Amount">
                             <div class="input-group-addon">€</div>
                         </div>
-                        <input type="hidden" name="id" value="<?php echo $account->getId()?>">
-                        <p></p>
+                        <input type="hidden" name="id" value="<?php echo $account->getId()?>"> <br>
                         <input type="submit" name="sendwithdraw" value="send withdraw">
                     </form>
                     </body>
