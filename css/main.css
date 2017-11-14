@@ -263,6 +263,11 @@ td.text-right {
   margin-bottom: 20px;
 }
 
+.maa {
+  display: block;
+  margin-bottom: 10px;
+}
+
 .bgc {
   background-color: red;
   width: 40%;
@@ -271,6 +276,10 @@ td.text-right {
 }
 .top {
   padding-top: 20px;
+}
+
+.maaa {
+  padding-bottom: 50px;
 }
 
 
