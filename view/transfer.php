@@ -7,7 +7,7 @@ include 'view/header.php';
         <tbody class="table-hover">
             <tr id="hov">
                 <td class="test hov">
-                    <p>debit account</p>
+                    <p class="maa">debit account</p>
                     <form action="index.php" method="post">
                         <select class="" name="debit">
                           <?php
@@ -18,7 +18,7 @@ include 'view/header.php';
                           } ?>
                         </select>
 
-                        <p>credit account</p>
+                        <p class="maa">credit account</p>
                         <select class="" name="credit">
                           <?php
                           foreach ($list as $value) {
